@@ -1,18 +1,19 @@
 package Complete::Perl;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
 
+#use Complete;
 #use List::MoreUtils qw(uniq);
 
 our %SPEC;
 require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw();
-
-# DATE
-# VERSION
 
 # TODO: complete_lexical, though probably you should just use
 # complete_array(array => [keys %{ lexicals() }]) (see L<lexicals>)
