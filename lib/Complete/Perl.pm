@@ -7,7 +7,6 @@ use 5.010001;
 use strict;
 use warnings;
 
-#use Complete;
 #use List::MoreUtils qw(uniq);
 
 our %SPEC;
