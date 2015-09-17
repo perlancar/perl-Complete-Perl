@@ -15,7 +15,7 @@ our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw();
 
 # TODO: complete_lexical, though probably you should just use
-# complete_array(array => [keys %{ lexicals() }]) (see L<lexicals>)
+# complete_array_elem(array => [keys %{ lexicals() }]) (see L<lexicals>)
 
 # TODO: complete_function(package => ...)
 
