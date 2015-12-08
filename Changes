@@ -1,5 +1,11 @@
 Revision history for Complete-Perl
 
+0.03    2015-12-08 (PERLANCAR)
+
+        - [Bugfix] complete_perl_version: Fix behavior when dev is not specified
+          (don't search dev versions, unless when we don't find any matches).
+
+
 0.02    2015-12-07 (PERLANCAR)
 
 	- Add function: complete_perl_version.
