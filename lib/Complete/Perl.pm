@@ -90,6 +90,7 @@ sub complete_perl_version {
         my @vers_normalnonv = map {my $v = $_; $v =~ s/\Av//; $v }
             @vers_normalv;
 
+        local $Complete::Common::OPT_FUZZY = 0;
         if ($use_v) {
             $res = Complete::Util::complete_array_elem(
                 word=>$word, array => \@vers_normalv);
@@ -100,6 +101,7 @@ sub complete_perl_version {
             $res = Complete::Util::complete_array_elem(
                 word=>$word, array => \@vers);
         }
+        last if @$res;
     }
     $res;
 }
