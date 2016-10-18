@@ -16,19 +16,30 @@ require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(
                        complete_perl_version
+                       complete_perl_builtin_functions
                );
 
-# TODO: complete_lexical, though probably you should just use
-# complete_array_elem(array => [keys %{ lexicals() }]) (see L<lexicals>)
+$SPEC{complete_perl_builtin_functions} = {
+    v => 1.1,
+    description => <<'_',
 
-# TODO: complete_function(package => ...)
+Currently using `@Functions` from <pm:B::Keywords>.
 
-# TODO: complete_global_variable(package => ...) # can complete
-# array/hash/scalar, can accept sigil or not
+_
+    args => {
+        %arg_word,
+    },
+}
+sub complete_perl_builtin_functions {
+    require B::Keywords;
+    require Complete::Util;
 
-# TODO: complete_method()
-
-# TODO: complete_keyword()
+    my %args = @_;
+    Complete::Util::complete_array_elem(
+        word => $args{words},
+        array => \@B::Keywords::Functions,
+    );
+}
 
 $SPEC{complete_perl_version} = {
     v => 1.1,
@@ -113,8 +124,6 @@ sub complete_perl_version {
 
 
 =head1 DESCRIPTION
-
-Not yet implemented, land grab :)
 
 
 =head1 SEE ALSO
