@@ -41,6 +41,28 @@ sub complete_perl_builtin_functions {
     );
 }
 
+$SPEC{complete_perl_builtin_symbols} = {
+    v => 1.1,
+    description => <<'_',
+
+Currently using `@Symbols` from <pm:B::Keywords>.
+
+_
+    args => {
+        %arg_word,
+    },
+}
+sub complete_perl_builtin_symbols {
+    require B::Keywords;
+    require Complete::Util;
+
+    my %args = @_;
+    Complete::Util::complete_array_elem(
+        word => $args{words},
+        array => \@B::Keywords::Symbols,
+    );
+}
+
 $SPEC{complete_perl_version} = {
     v => 1.1,
     args => {
