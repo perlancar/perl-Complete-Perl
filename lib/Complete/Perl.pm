@@ -16,10 +16,11 @@ require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(
                        complete_perl_version
-                       complete_perl_builtin_functions
+                       complete_perl_builtin_function
+                       complete_perl_builtin_symbol
                );
 
-$SPEC{complete_perl_builtin_functions} = {
+$SPEC{complete_perl_builtin_function} = {
     v => 1.1,
     description => <<'_',
 
@@ -31,7 +32,7 @@ _
     },
     result_naked => 1,
 };
-sub complete_perl_builtin_functions {
+sub complete_perl_builtin_function {
     require B::Keywords;
     require Complete::Util;
 
@@ -54,7 +55,7 @@ _
     },
     result_naked => 1,
 };
-sub complete_perl_builtin_symbols {
+sub complete_perl_builtin_symbol {
     require B::Keywords;
     require Complete::Util;
 
