@@ -43,7 +43,7 @@ sub complete_perl_builtin_function {
     );
 }
 
-$SPEC{complete_perl_builtin_symbols} = {
+$SPEC{complete_perl_builtin_symbol} = {
     v => 1.1,
     description => <<'_',
 
