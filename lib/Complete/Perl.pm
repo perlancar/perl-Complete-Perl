@@ -37,7 +37,7 @@ sub complete_perl_builtin_functions {
 
     my %args = @_;
     Complete::Util::complete_array_elem(
-        word => $args{words},
+        word => $args{word},
         array => \@B::Keywords::Functions,
     );
 }
@@ -60,7 +60,7 @@ sub complete_perl_builtin_symbols {
 
     my %args = @_;
     Complete::Util::complete_array_elem(
-        word => $args{words},
+        word => $args{word},
         array => \@B::Keywords::Symbols,
     );
 }
