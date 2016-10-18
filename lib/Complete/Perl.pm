@@ -29,7 +29,8 @@ _
     args => {
         %arg_word,
     },
-}
+    result_naked => 1,
+};
 sub complete_perl_builtin_functions {
     require B::Keywords;
     require Complete::Util;
@@ -51,7 +52,8 @@ _
     args => {
         %arg_word,
     },
-}
+    result_naked => 1,
+};
 sub complete_perl_builtin_symbols {
     require B::Keywords;
     require Complete::Util;
@@ -87,7 +89,7 @@ and if none is found will try with.
 _
         },
     },
-
+    result_naked => 1,
 };
 sub complete_perl_version {
     require Complete::Util;
