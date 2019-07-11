@@ -1,10 +1,10 @@
-0.05    2016-10-18 (PERLANCAR)
+0.05    2016-10-18  Released-By: PERLANCAR
 
         - [Incompatible change] Rename functions for consistency:
           complete_perl_builtin_symbol{s,}, complete_perl_builtin_function{s,}.
 
 
-0.04    2016-10-18 (PERLANCAR)
+0.04    2016-10-18  Released-By: PERLANCAR
 
         - Add functions: complete_perl_builtin_symbols,
           complete_perl_builtin_functions.
@@ -12,18 +12,18 @@
         - Fix Rinci metadata (forgot to set result_naked=1).
 
 
-0.03    2015-12-08 (PERLANCAR)
+0.03    2015-12-08  Released-By: PERLANCAR
 
         - [Bugfix] complete_perl_version: Fix behavior when dev is not specified
           (don't search dev versions, unless when we don't find any matches).
 
 
-0.02    2015-12-07 (PERLANCAR)
+0.02    2015-12-07  Released-By: PERLANCAR
 
 	- Add function: complete_perl_version.
 
 
-0.01    2015-09-09 (PERLANCAR)
+0.01    2015-09-09  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -32,6 +32,6 @@
 	  requirement.
 
 
-0.00    2014-07-02 (SHARYANTO)
+0.00    2014-07-02  Released-By: SHARYANTO
 
         - First release, no implementation yet.
